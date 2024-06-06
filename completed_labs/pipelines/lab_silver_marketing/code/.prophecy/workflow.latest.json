@@ -1,0 +1,1866 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "7.1.83",
+        "pyPiVersion" : "1.8.13"
+      }
+    },
+    "id" : "1",
+    "uri" : "pipelines/lab_silver_marketing",
+    "language" : "python",
+    "fabricId" : "12752",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "prophecyteam.labsamples.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions", "prophecy.streaming.functions", "prophecyteam.prophecyanalyticalfunctionspython.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "bronze",
+          "kind" : {
+            "type" : "string",
+            "value" : "bronze"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "silver",
+          "kind" : {
+            "type" : "string",
+            "value" : "silver"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12656",
+      "projectName" : "ProphecyStreamingPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "16362",
+      "projectName" : "ProphecyAnalyticalFunctionsPython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "silvermarketing",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "YeEEh8zSbHUuruaBtvFqE$$PA_G3fvEQA38moIqEMf8c",
+    "source" : "1vz_lAPl1qEAD35zqtE-v$$gBF5S_GSJaxQdcVIzDqCt",
+    "sourcePort" : "hpy1DuokF35kKxF2LFmgw$$RCwDW9JHEmEbSaMSsFwZ2",
+    "target" : "PJgklyssEkha3owHBGhbD$$W0x0Iy0a2qkJxuHHx2Xp9",
+    "targetPort" : "mnOToZhk5kJLpE8zDYJju$$3eeTcicUZq-4M6FP7dsJn"
+  }, {
+    "id" : "EqKkLJ70vvso6x2HP5gyr",
+    "source" : "1vz_lAPl1qEAD35zqtE-v$$gBF5S_GSJaxQdcVIzDqCt",
+    "sourcePort" : "hpy1DuokF35kKxF2LFmgw$$RCwDW9JHEmEbSaMSsFwZ2",
+    "target" : "IW7_YtGJ7V-qwRqYluURb$$e5Xmx7U1DF8A6_vZGwhvE",
+    "targetPort" : "pbAr9Cq-AC1MjP4VU-z9-$$s2VJH3lCLRybseq1GJb_c"
+  }, {
+    "id" : "fY9VhVzErJqbcwcQSyPHo$$l5VCoCFdlD60n2GNVVNr4",
+    "source" : "IW7_YtGJ7V-qwRqYluURb$$e5Xmx7U1DF8A6_vZGwhvE",
+    "sourcePort" : "eUyFClfK7ebgKLoRT5S_Z$$e8riC_V_X_9JHApMQ04kW",
+    "target" : "gjycIdK1QxsUdc3AyFffI$$nmK-8BK6rJXLVtG09GlsF",
+    "targetPort" : "qqQa__BQ1VS0AFYSouVjV$$pAyIw7DGnZ5133dNSOAi5"
+  }, {
+    "id" : "ICUIhQEPmbsr9vEOkU-Ha",
+    "source" : "M44vVQ22npPdjuo-kKLSF$$2vZWSMoQ5tAirmKgbazCY",
+    "sourcePort" : "Evzu47HKTxbc4Df4cRSFB$$nli6zZqRlF2LHdQxpEZec",
+    "target" : "gjycIdK1QxsUdc3AyFffI$$nmK-8BK6rJXLVtG09GlsF",
+    "targetPort" : "l-ZP3XoHD6DfVb7jNOrVp$$G8pXxsVDWmej_hcpwvWQu"
+  }, {
+    "id" : "w30oMUzxjMEFjHpjbtbSh$$ocbbJH4t_Rmo6aivpLo8X",
+    "source" : "gjycIdK1QxsUdc3AyFffI$$nmK-8BK6rJXLVtG09GlsF",
+    "sourcePort" : "3fUrohYulajdWDxnytqSk$$4MaR2TAW-04A_ZlolylDM",
+    "target" : "mEauXQ3TxVY6KvVIT2INo$$ih8NztkL0FEJkx2GzE1nh",
+    "targetPort" : "F7dkCOja6Fq4NUTarYkV6$$fxIyj8q2vTMPSckmuLdxR"
+  }, {
+    "id" : "TqrcjjeUOScMeX-MhVfJL",
+    "source" : "DZdQqey3pUlmXu3xOcrkj$$25LqpbWupnvl_6RGhBGNf",
+    "sourcePort" : "pCN56c5XTY4fKNz-urpsr$$HfRzaNnA6uZFVe-PGQqK4",
+    "target" : "mEauXQ3TxVY6KvVIT2INo$$ih8NztkL0FEJkx2GzE1nh",
+    "targetPort" : "WA7F-DSbZcXevppa5HIam$$8Kc1WdJzRrDLsuj1HJ7ji"
+  }, {
+    "id" : "niAsU3cKZDTsbcYX5tmxY$$4FeUnR8e0e-spPGcdR-pk",
+    "source" : "mEauXQ3TxVY6KvVIT2INo$$ih8NztkL0FEJkx2GzE1nh",
+    "sourcePort" : "KllStZZDmMQQMK2H7qD0w$$aO7XxOwTkdKJ_8xQalanA",
+    "target" : "ak_zZHghuu_G2ujYxpKlE$$1ymfo0Gl2APY3IigS2UKL",
+    "targetPort" : "DwDUVh_Ch9AFYZuabXhCP$$cMK1vn2DlUknOuWU0Hd42"
+  }, {
+    "id" : "gGiDadA6GBFM6Gtqe8Dk7$$l5kYa0WrYMUeEe0jmI5zM",
+    "source" : "ak_zZHghuu_G2ujYxpKlE$$1ymfo0Gl2APY3IigS2UKL",
+    "sourcePort" : "LWMSBrTNBLN6YFWOT4L9z$$Ou2NA8t3fAm77w04M4ffg",
+    "target" : "LbHeKX0wPkCBuwWRRrP5p$$ltP7Z4x4ILSt25rkKITYx",
+    "targetPort" : "NerSjyBtCwbpNXkKkN7QT$$shFKrIT1g3WOR47WJgUe1"
+  }, {
+    "id" : "OlLs68-765IC2LPA8NZki",
+    "source" : "PJgklyssEkha3owHBGhbD$$W0x0Iy0a2qkJxuHHx2Xp9",
+    "sourcePort" : "hUTnS3BKVKYdFMqWt1pjj$$4zpNTw3ZNm-gfCtsNfw3n",
+    "target" : "LbHeKX0wPkCBuwWRRrP5p$$ltP7Z4x4ILSt25rkKITYx",
+    "targetPort" : "Q90lZ3mQNoSaUdhOdmQhj$$5hINxSXWigWpSEDL8BNBa"
+  }, {
+    "id" : "jzU054Y_GjHnIMpRS4jig",
+    "source" : "M44vVQ22npPdjuo-kKLSF$$2vZWSMoQ5tAirmKgbazCY",
+    "sourcePort" : "Evzu47HKTxbc4Df4cRSFB$$nli6zZqRlF2LHdQxpEZec",
+    "target" : "LbHeKX0wPkCBuwWRRrP5p$$ltP7Z4x4ILSt25rkKITYx",
+    "targetPort" : "uOjS6JvcCOjzoFevVT3lu"
+  }, {
+    "id" : "swgVvudxxONZG-8V_l5Un$$FPrv9WGEDGtdu4ejbr4De",
+    "source" : "LbHeKX0wPkCBuwWRRrP5p$$ltP7Z4x4ILSt25rkKITYx",
+    "sourcePort" : "pBaRcs23ynN-QefeqaYyq$$Oso3hgews1SMu3n_d4afi",
+    "target" : "sF37GgTG5dGJdN_hAIiK3$$BwB1QS738_oyHc3Mf5AJ8",
+    "targetPort" : "_smG0ea4xRB2KFD9NNkYE$$U1oRvRHSbrd4AT3DCrJk7"
+  } ],
+  "processes" : {
+    "ak_zZHghuu_G2ujYxpKlE$$1ymfo0Gl2APY3IigS2UKL" : {
+      "id" : "ak_zZHghuu_G2ujYxpKlE$$1ymfo0Gl2APY3IigS2UKL",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "SumRevenue",
+        "slug" : "SumRevenue",
+        "x" : -360,
+        "y" : -80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Calculates the total revenue generated per campaign.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DwDUVh_Ch9AFYZuabXhCP$$cMK1vn2DlUknOuWU0Hd42",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "price_usd_cents",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "campaign_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "product_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "dt",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "sales_id",
+              "type" : "long",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "LWMSBrTNBLN6YFWOT4L9z$$Ou2NA8t3fAm77w04M4ffg",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "allIns" : false,
+        "doPivot" : false,
+        "aggregate" : [ {
+          "target" : "revenue_generated_usd_cents",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "sum(price_usd_cents)"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
+        "allowSelection" : true,
+        "pivotColumn" : null,
+        "pivotValues" : [ ],
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "DwDUVh_Ch9AFYZuabXhCP$$cMK1vn2DlUknOuWU0Hd42##price_usd_cents", "DwDUVh_Ch9AFYZuabXhCP$$cMK1vn2DlUknOuWU0Hd42##campaign_id" ],
+        "groupBy" : [ {
+          "target" : "campaign_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "campaign_id"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Aggregate",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "IW7_YtGJ7V-qwRqYluURb$$e5Xmx7U1DF8A6_vZGwhvE" : {
+      "id" : "IW7_YtGJ7V-qwRqYluURb$$e5Xmx7U1DF8A6_vZGwhvE",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "IsClick",
+        "slug" : "IsClick",
+        "x" : -860,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "pbAr9Cq-AC1MjP4VU-z9-$$s2VJH3lCLRybseq1GJb_c",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "event_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "dt",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "campaign_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "event_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "cost_usd_micros",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "click",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "banner_pos",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "site_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "site_domain",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "site_category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "app_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "app_domain",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "app_category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "device_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "device_ip",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "device_model",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "device_type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "device_conn_type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C14",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C15",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C16",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C17",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C18",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C19",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C20",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C21",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "eUyFClfK7ebgKLoRT5S_Z$$e8riC_V_X_9JHApMQ04kW",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "pbAr9Cq-AC1MjP4VU-z9-$$s2VJH3lCLRybseq1GJb_c##click" ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "click = '1'"
+        }
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Filter",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "PJgklyssEkha3owHBGhbD$$W0x0Iy0a2qkJxuHHx2Xp9" : {
+      "id" : "PJgklyssEkha3owHBGhbD$$W0x0Iy0a2qkJxuHHx2Xp9",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "SumCosts",
+        "slug" : "SumCosts",
+        "x" : -600,
+        "y" : -320,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "mnOToZhk5kJLpE8zDYJju$$3eeTcicUZq-4M6FP7dsJn",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "event_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "dt",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "campaign_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "event_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "cost_usd_micros",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "click",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "banner_pos",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "site_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "site_domain",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "site_category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "app_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "app_domain",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "app_category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "device_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "device_ip",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "device_model",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "device_type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "device_conn_type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C14",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C15",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C16",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C17",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C18",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C19",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C20",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C21",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "hUTnS3BKVKYdFMqWt1pjj$$4zpNTw3ZNm-gfCtsNfw3n",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "allIns" : false,
+        "doPivot" : false,
+        "aggregate" : [ {
+          "target" : "campaign_cost_micros_usd",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "sum(cost_usd_micros)"
+          },
+          "description" : "",
+          "_row_id" : "c_47"
+        } ],
+        "allowSelection" : true,
+        "pivotColumn" : null,
+        "pivotValues" : [ ],
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "mnOToZhk5kJLpE8zDYJju$$3eeTcicUZq-4M6FP7dsJn##cost_usd_micros", "mnOToZhk5kJLpE8zDYJju$$3eeTcicUZq-4M6FP7dsJn##campaign_id" ],
+        "groupBy" : [ {
+          "target" : "campaign_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "campaign_id"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Aggregate",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "DZdQqey3pUlmXu3xOcrkj$$25LqpbWupnvl_6RGhBGNf" : {
+      "id" : "DZdQqey3pUlmXu3xOcrkj$$25LqpbWupnvl_6RGhBGNf",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "silver-fct-sales",
+        "slug" : "silver_fct_sales",
+        "x" : -1140,
+        "y" : 180,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "pCN56c5XTY4fKNz-urpsr$$HfRzaNnA6uZFVe-PGQqK4",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/silver-fct-sales"
+      }
+    },
+    "M44vVQ22npPdjuo-kKLSF$$2vZWSMoQ5tAirmKgbazCY" : {
+      "id" : "M44vVQ22npPdjuo-kKLSF$$2vZWSMoQ5tAirmKgbazCY",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "bronze-marketing-campaigns",
+        "slug" : "bronze_marketing_campaigns",
+        "x" : -1140,
+        "y" : 20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "Evzu47HKTxbc4Df4cRSFB$$nli6zZqRlF2LHdQxpEZec",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/bronze-marketing-campaigns"
+      }
+    },
+    "sF37GgTG5dGJdN_hAIiK3$$BwB1QS738_oyHc3Mf5AJ8" : {
+      "id" : "sF37GgTG5dGJdN_hAIiK3$$BwB1QS738_oyHc3Mf5AJ8",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "dim_campaign",
+        "slug" : "dim_campaign",
+        "x" : 100,
+        "y" : -20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "_smG0ea4xRB2KFD9NNkYE$$U1oRvRHSbrd4AT3DCrJk7",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "campaign_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "product_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "campaign_start",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "campaign_end",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "campaign_cost_micros_usd",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "revenue_generated_usd_cents",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/dim_campaign"
+      }
+    },
+    "LbHeKX0wPkCBuwWRRrP5p$$ltP7Z4x4ILSt25rkKITYx" : {
+      "id" : "LbHeKX0wPkCBuwWRRrP5p$$ltP7Z4x4ILSt25rkKITYx",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "campaign_join",
+        "slug" : "campaign_join",
+        "x" : -80,
+        "y" : -20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Joins campaign data with product and revenue information, providing a comprehensive view of campaign performance.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Q90lZ3mQNoSaUdhOdmQhj$$5hINxSXWigWpSEDL8BNBa",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "campaign_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "campaign_cost_micros_usd",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "NerSjyBtCwbpNXkKkN7QT$$shFKrIT1g3WOR47WJgUe1",
+          "slug" : "in1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "campaign_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "revenue_generated_usd_cents",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "uOjS6JvcCOjzoFevVT3lu",
+          "slug" : "in2",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "campaign_end",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "campaign_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "campaign_start",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "product_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "pBaRcs23ynN-QefeqaYyq$$Oso3hgews1SMu3n_d4afi",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.campaign_id = in1.campaign_id"
+          },
+          "joinType" : "outer"
+        }, {
+          "alias" : "in2",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.campaign_id = in2.campaign_id"
+          },
+          "joinType" : "outer"
+        } ],
+        "expressions" : [ {
+          "target" : "campaign_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in2.campaign_id"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "product_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in2.product_id"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "campaign_start",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in2.campaign_start"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "campaign_end",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in2.campaign_end"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "campaign_cost_micros_usd",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.campaign_cost_micros_usd"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "revenue_generated_usd_cents",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in1.revenue_generated_usd_cents"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
+        "hints" : [ {
+          "id" : "Q90lZ3mQNoSaUdhOdmQhj$$5hINxSXWigWpSEDL8BNBa",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "NerSjyBtCwbpNXkKkN7QT$$shFKrIT1g3WOR47WJgUe1",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "uOjS6JvcCOjzoFevVT3lu",
+          "alias" : "in2",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "uOjS6JvcCOjzoFevVT3lu##campaign_id", "NerSjyBtCwbpNXkKkN7QT$$shFKrIT1g3WOR47WJgUe1##campaign_id", "Q90lZ3mQNoSaUdhOdmQhj$$5hINxSXWigWpSEDL8BNBa##campaign_id", "NerSjyBtCwbpNXkKkN7QT$$shFKrIT1g3WOR47WJgUe1##revenue_generated_usd_cents", "uOjS6JvcCOjzoFevVT3lu##campaign_start", "uOjS6JvcCOjzoFevVT3lu##product_id", "uOjS6JvcCOjzoFevVT3lu##campaign_id", "uOjS6JvcCOjzoFevVT3lu##campaign_end", "Q90lZ3mQNoSaUdhOdmQhj$$5hINxSXWigWpSEDL8BNBa##campaign_cost_micros_usd" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "mEauXQ3TxVY6KvVIT2INo$$ih8NztkL0FEJkx2GzE1nh" : {
+      "id" : "mEauXQ3TxVY6KvVIT2INo$$ih8NztkL0FEJkx2GzE1nh",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "JoinSalesDate",
+        "slug" : "JoinSalesDate",
+        "x" : -500,
+        "y" : -80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "F7dkCOja6Fq4NUTarYkV6$$fxIyj8q2vTMPSckmuLdxR",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "event_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "dt",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "product_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "campaign_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "WA7F-DSbZcXevppa5HIam$$8Kc1WdJzRrDLsuj1HJ7ji",
+          "slug" : "in1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "sales_id",
+              "type" : "long",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "customer_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "sale_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "product_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "price_usd_cents",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "shipping_phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "shipping_full_address",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "shipping_state",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "KllStZZDmMQQMK2H7qD0w$$aO7XxOwTkdKJ_8xQalanA",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.dt = to_date(in1.sale_date) and in0.product_id = in1.product_id"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "target" : "price_usd_cents",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in1.price_usd_cents"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "campaign_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.campaign_id"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "product_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.product_id"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "dt",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.dt"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "sales_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in1.sales_id"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
+        "hints" : [ {
+          "id" : "F7dkCOja6Fq4NUTarYkV6$$fxIyj8q2vTMPSckmuLdxR",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "WA7F-DSbZcXevppa5HIam$$8Kc1WdJzRrDLsuj1HJ7ji",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "WA7F-DSbZcXevppa5HIam$$8Kc1WdJzRrDLsuj1HJ7ji##sale_date", "F7dkCOja6Fq4NUTarYkV6$$fxIyj8q2vTMPSckmuLdxR##product_id", "F7dkCOja6Fq4NUTarYkV6$$fxIyj8q2vTMPSckmuLdxR##dt", "WA7F-DSbZcXevppa5HIam$$8Kc1WdJzRrDLsuj1HJ7ji##product_id", "F7dkCOja6Fq4NUTarYkV6$$fxIyj8q2vTMPSckmuLdxR##dt", "F7dkCOja6Fq4NUTarYkV6$$fxIyj8q2vTMPSckmuLdxR##product_id", "F7dkCOja6Fq4NUTarYkV6$$fxIyj8q2vTMPSckmuLdxR##campaign_id", "WA7F-DSbZcXevppa5HIam$$8Kc1WdJzRrDLsuj1HJ7ji##sales_id", "WA7F-DSbZcXevppa5HIam$$8Kc1WdJzRrDLsuj1HJ7ji##price_usd_cents" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "gjycIdK1QxsUdc3AyFffI$$nmK-8BK6rJXLVtG09GlsF" : {
+      "id" : "gjycIdK1QxsUdc3AyFffI$$nmK-8BK6rJXLVtG09GlsF",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "JoinProductId",
+        "slug" : "JoinProductId",
+        "x" : -640,
+        "y" : -120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "qqQa__BQ1VS0AFYSouVjV$$pAyIw7DGnZ5133dNSOAi5",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "event_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "dt",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "campaign_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "event_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "cost_usd_micros",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "click",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "banner_pos",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "site_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "site_domain",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "site_category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "app_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "app_domain",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "app_category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "device_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "device_ip",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "device_model",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "device_type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "device_conn_type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C14",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C15",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C16",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C17",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C18",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C19",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C20",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C21",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "l-ZP3XoHD6DfVb7jNOrVp$$G8pXxsVDWmej_hcpwvWQu",
+          "slug" : "in1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "campaign_end",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "campaign_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "campaign_start",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "product_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "3fUrohYulajdWDxnytqSk$$4MaR2TAW-04A_ZlolylDM",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.campaign_id = in1.campaign_id"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "target" : "event_time",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.event_time"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "dt",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.dt"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "product_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in1.product_id"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "campaign_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.campaign_id"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
+        "hints" : [ {
+          "id" : "qqQa__BQ1VS0AFYSouVjV$$pAyIw7DGnZ5133dNSOAi5",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "l-ZP3XoHD6DfVb7jNOrVp$$G8pXxsVDWmej_hcpwvWQu",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "qqQa__BQ1VS0AFYSouVjV$$pAyIw7DGnZ5133dNSOAi5##campaign_id", "l-ZP3XoHD6DfVb7jNOrVp$$G8pXxsVDWmej_hcpwvWQu##campaign_id", "qqQa__BQ1VS0AFYSouVjV$$pAyIw7DGnZ5133dNSOAi5##campaign_id", "l-ZP3XoHD6DfVb7jNOrVp$$G8pXxsVDWmej_hcpwvWQu##product_id", "qqQa__BQ1VS0AFYSouVjV$$pAyIw7DGnZ5133dNSOAi5##event_time", "qqQa__BQ1VS0AFYSouVjV$$pAyIw7DGnZ5133dNSOAi5##dt" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "1vz_lAPl1qEAD35zqtE-v$$gBF5S_GSJaxQdcVIzDqCt" : {
+      "id" : "1vz_lAPl1qEAD35zqtE-v$$gBF5S_GSJaxQdcVIzDqCt",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "bronze-marketing-events",
+        "slug" : "bronze_marketing_events",
+        "x" : -1140,
+        "y" : -160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "hpy1DuokF35kKxF2LFmgw$$RCwDW9JHEmEbSaMSsFwZ2",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/bronze-marketing-events"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

@@ -1,0 +1,900 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "7.1.83",
+        "pyPiVersion" : "1.8.13"
+      }
+    },
+    "id" : "1",
+    "uri" : "pipelines/incremental-load-bronze-example",
+    "language" : "python",
+    "fabricId" : "12752",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "prophecyteam.labsamples.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions", "prophecy.streaming.functions", "prophecyteam.prophecyanalyticalfunctionspython.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "dt",
+          "kind" : {
+            "type" : "string",
+            "value" : "2023-01-05"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "source_path",
+          "kind" : {
+            "type" : "string",
+            "value" : "dbfs:/course_lab/rainforest_raw_data"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "bronze",
+          "kind" : {
+            "type" : "string",
+            "value" : "bronze"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12656",
+      "projectName" : "ProphecyStreamingPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "16362",
+      "projectName" : "ProphecyAnalyticalFunctionsPython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "incrementalloadbronzeexample",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "t54TL5LDS9BgZLgdQciNA",
+    "source" : "qjIzgp90KNghwKTvrNBvb$$oiKYTPagmtfXBNk6ehdI1",
+    "sourcePort" : "2oKPx-0z-mQAip-nmXD5a$$cxh5G9HdfXJ_YHT2JO_q6",
+    "target" : "co25RbP-zgjNnHkTdYiXX$$d6kqe-KuisPw2ZaY4W4Fn",
+    "targetPort" : "jjHZ6OMUG7v3m8YFvF4vd$$MyneKTWxz2cf9ZwOcgXNf"
+  }, {
+    "id" : "tVgkIkSJxeQ8pzX5TTTrj$$iXCIViLRAshiLfyEpGusg",
+    "source" : "cyaZapcYbfXpf7rxuzN5d$$WbzeG22LRvwa9Hg-lOZpE",
+    "sourcePort" : "350amdTAjQXhZyzNlOneF$$LSlbg91-YDDuLrvytsbNG",
+    "target" : "BRfUQe997gzxC-2ATIVXs$$UdveOz0lc664P5Nj0xUY3",
+    "targetPort" : "6zx1DYct3zZPeZWUcV7uS$$Wz7AUWEKVUtsP3fQuzfrT"
+  }, {
+    "id" : "VdbvOSKcALRdDyaTTOurg",
+    "source" : "PeTjxLnuUPsIrm72kBd7Q$$-AX2mdoDKuZ46KgSnBeq_",
+    "sourcePort" : "rrqsTu9J2Apyf4S6v8tt1$$NxghCjKjLdT4hf_yNuZDq",
+    "target" : "ZstlzZJU5hd53wOFqMj2q$$LyxLgqBGALVNwhiYP5g4f",
+    "targetPort" : "I_Nk5NDNAzxvlWCT0vpN5$$FLfEFvbBlOKSBF5g5NPHv"
+  }, {
+    "id" : "WMGTRP5TQXpvI_tKA4eGN",
+    "source" : "ZstlzZJU5hd53wOFqMj2q$$LyxLgqBGALVNwhiYP5g4f",
+    "sourcePort" : "wMdhkKJR7Lj00MGnwGYkp$$go9lyHQ9QzTHdeHBiiS7M",
+    "target" : "2EBKIo5LCA3FsL1FNOCw4$$SfnqmmoW98jzI5I6twDyj",
+    "targetPort" : "bILjxB_DcmtG54DdZ24pF$$ePnkeZ46lZnCBDoRV4r69"
+  } ],
+  "processes" : {
+    "vDxwSZVXwLVUt3LVjdra9$$5pz9bOW47GXlVsa-i94ZB" : {
+      "id" : "vDxwSZVXwLVUt3LVjdra9$$5pz9bOW47GXlVsa-i94ZB",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "bronze-sales",
+        "slug" : "bronze_sales",
+        "x" : -880,
+        "y" : -900,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "rU4OaPHsohQgI2qS7IziM$$z4M-K4RDiS0tSwg8IF8RM",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/bronze-sales"
+      }
+    },
+    "2EBKIo5LCA3FsL1FNOCw4$$SfnqmmoW98jzI5I6twDyj" : {
+      "id" : "2EBKIo5LCA3FsL1FNOCw4$$SfnqmmoW98jzI5I6twDyj",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "bronze-customers-increment",
+        "slug" : "bronze_customers_increment",
+        "x" : -400,
+        "y" : -720,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "bILjxB_DcmtG54DdZ24pF$$ePnkeZ46lZnCBDoRV4r69",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "signup_date",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "valid_from",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "valid_to",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "is_original",
+              "type" : "boolean",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "is_current",
+              "type" : "boolean",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "customer_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "phone_number",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "street_number",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "street_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "unit",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "city",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "state",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "postcode",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "lat",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "lon",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/bronze-customers-increment"
+      }
+    },
+    "ZstlzZJU5hd53wOFqMj2q$$LyxLgqBGALVNwhiYP5g4f" : {
+      "id" : "ZstlzZJU5hd53wOFqMj2q$$LyxLgqBGALVNwhiYP5g4f",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "AddScd2Fields",
+        "slug" : "AddScd2Fields",
+        "x" : -620,
+        "y" : -720,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "I_Nk5NDNAzxvlWCT0vpN5$$FLfEFvbBlOKSBF5g5NPHv",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "signup_date",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "customer_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "phone_number",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "street_number",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "street_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "unit",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "city",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "state",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "postcode",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "lat",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "lon",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "wMdhkKJR7Lj00MGnwGYkp$$go9lyHQ9QzTHdeHBiiS7M",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "customer_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "customer_id"
+          },
+          "description" : ""
+        }, {
+          "target" : "signup_date",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "signup_date"
+          },
+          "description" : ""
+        }, {
+          "target" : "valid_from",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "to_date('$dt')"
+          },
+          "description" : ""
+        }, {
+          "target" : "valid_to",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(null as date)"
+          },
+          "description" : ""
+        }, {
+          "target" : "is_original",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "true"
+          },
+          "description" : ""
+        }, {
+          "target" : "is_current",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "true"
+          },
+          "description" : ""
+        }, {
+          "target" : "customer_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "customer_name"
+          },
+          "description" : ""
+        }, {
+          "target" : "phone_number",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "phone_number"
+          },
+          "description" : ""
+        }, {
+          "target" : "street_number",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "street_number"
+          },
+          "description" : ""
+        }, {
+          "target" : "street_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "street_name"
+          },
+          "description" : ""
+        }, {
+          "target" : "unit",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "unit"
+          },
+          "description" : ""
+        }, {
+          "target" : "city",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "city"
+          },
+          "description" : ""
+        }, {
+          "target" : "state",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "state"
+          },
+          "description" : ""
+        }, {
+          "target" : "postcode",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "postcode"
+          },
+          "description" : ""
+        }, {
+          "target" : "lat",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "lat"
+          },
+          "description" : ""
+        }, {
+          "target" : "lon",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "lon"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "I_Nk5NDNAzxvlWCT0vpN5$$FLfEFvbBlOKSBF5g5NPHv##street_name", "I_Nk5NDNAzxvlWCT0vpN5$$FLfEFvbBlOKSBF5g5NPHv##signup_date", "I_Nk5NDNAzxvlWCT0vpN5$$FLfEFvbBlOKSBF5g5NPHv##customer_id", "I_Nk5NDNAzxvlWCT0vpN5$$FLfEFvbBlOKSBF5g5NPHv##city", "I_Nk5NDNAzxvlWCT0vpN5$$FLfEFvbBlOKSBF5g5NPHv##customer_name", "I_Nk5NDNAzxvlWCT0vpN5$$FLfEFvbBlOKSBF5g5NPHv##lon", "I_Nk5NDNAzxvlWCT0vpN5$$FLfEFvbBlOKSBF5g5NPHv##lat", "I_Nk5NDNAzxvlWCT0vpN5$$FLfEFvbBlOKSBF5g5NPHv##phone_number", "I_Nk5NDNAzxvlWCT0vpN5$$FLfEFvbBlOKSBF5g5NPHv##street_number", "I_Nk5NDNAzxvlWCT0vpN5$$FLfEFvbBlOKSBF5g5NPHv##postcode", "I_Nk5NDNAzxvlWCT0vpN5$$FLfEFvbBlOKSBF5g5NPHv##state", "I_Nk5NDNAzxvlWCT0vpN5$$FLfEFvbBlOKSBF5g5NPHv##unit" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "qjIzgp90KNghwKTvrNBvb$$oiKYTPagmtfXBNk6ehdI1" : {
+      "id" : "qjIzgp90KNghwKTvrNBvb$$oiKYTPagmtfXBNk6ehdI1",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "raw-products-increment",
+        "slug" : "raw_products_increment",
+        "x" : -880,
+        "y" : -1440,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "2oKPx-0z-mQAip-nmXD5a$$cxh5G9HdfXJ_YHT2JO_q6",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/raw-products-increment"
+      }
+    },
+    "cyaZapcYbfXpf7rxuzN5d$$WbzeG22LRvwa9Hg-lOZpE" : {
+      "id" : "cyaZapcYbfXpf7rxuzN5d$$WbzeG22LRvwa9Hg-lOZpE",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "raw-sales-increment",
+        "slug" : "raw_sales_increment",
+        "x" : -880,
+        "y" : -1080,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "350amdTAjQXhZyzNlOneF$$LSlbg91-YDDuLrvytsbNG",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/raw-sales-increment"
+      }
+    },
+    "co25RbP-zgjNnHkTdYiXX$$d6kqe-KuisPw2ZaY4W4Fn" : {
+      "id" : "co25RbP-zgjNnHkTdYiXX$$d6kqe-KuisPw2ZaY4W4Fn",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "bronze-products-increment",
+        "slug" : "bronze_products_increment",
+        "x" : -580,
+        "y" : -1440,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "jjHZ6OMUG7v3m8YFvF4vd$$MyneKTWxz2cf9ZwOcgXNf",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "main_category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "sub_category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "date_introduced",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "price_usd_cents",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "product_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/bronze-products-increment"
+      }
+    },
+    "BRfUQe997gzxC-2ATIVXs$$UdveOz0lc664P5Nj0xUY3" : {
+      "id" : "BRfUQe997gzxC-2ATIVXs$$UdveOz0lc664P5Nj0xUY3",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "bronze-sales-increment",
+        "slug" : "bronze_sales_increment",
+        "x" : -600,
+        "y" : -1080,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "6zx1DYct3zZPeZWUcV7uS$$Wz7AUWEKVUtsP3fQuzfrT",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "num_products",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "products",
+              "type" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "name",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "product_id",
+                    "type" : "long",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  } ]
+                },
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "sale_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/bronze-sales-increment"
+      }
+    },
+    "OyVybcmoi_RJhlyKlA4cH$$MRDhPmXg_ZVTGvLu-auyc" : {
+      "id" : "OyVybcmoi_RJhlyKlA4cH$$MRDhPmXg_ZVTGvLu-auyc",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "bronze-products",
+        "slug" : "bronze_products",
+        "x" : -880,
+        "y" : -1260,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "KR0P4BghnB6525Od18jsC$$gfzI-SRcC_DfWlFOtuRhx",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/bronze-products"
+      }
+    },
+    "PeTjxLnuUPsIrm72kBd7Q$$-AX2mdoDKuZ46KgSnBeq_" : {
+      "id" : "PeTjxLnuUPsIrm72kBd7Q$$-AX2mdoDKuZ46KgSnBeq_",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "raw-customer-snapshot",
+        "slug" : "raw_customer_snapshot",
+        "x" : -860,
+        "y" : -720,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "rrqsTu9J2Apyf4S6v8tt1$$NxghCjKjLdT4hf_yNuZDq",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/raw-customer-snapshot"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}
